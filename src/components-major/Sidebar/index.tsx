@@ -3,7 +3,7 @@ import { styled } from "@deliveryhero/armor";
 import dhLogo from '../../assets/DHIcon.svg'
 
 const SidebarBody = styled.div`
-  width: 30%;
+  width: 200px;
   background-color: #454545;
   display: flex;
   flex-direction: column;

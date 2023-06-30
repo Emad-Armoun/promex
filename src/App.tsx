@@ -13,7 +13,7 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 const MainColumn = styled.div`
-  width: 70%;
+  width: calc(100% - 200px);
 `;
 
 function App() {
