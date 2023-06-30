@@ -1,30 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+// import React from 'react'
 import './App.css'
+import Header from './components-major/Header';
+import Sidebar from './components-major/Sidebar';
+import ContentRender from './components-major/ContentRender';
+import { styled } from '@deliveryhero/armor';
+
+const Container = styled.div`
+  width: 800px;
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+`;
+const MainColumn = styled.div`
+  width: 70%;
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  // const classes = useCommonClasses();
   return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>PromEx</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Developed By: Emad Armoun
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the React logo to learn more
-      </p>
-    </>
+    <Container>
+      <Sidebar />
+      <MainColumn>
+        <Header />
+        <ContentRender />
+      </MainColumn>
+    </Container>
   )
 }
 
