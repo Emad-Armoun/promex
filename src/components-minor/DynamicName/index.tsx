@@ -1,5 +1,6 @@
 import { styled } from '@deliveryhero/armor';
 import React, { useState, useEffect } from 'react';
+import LoadingComponent from '../LoadingComponent';
 
 const CustomInput = styled.input`
   background-color: white;
@@ -67,7 +68,7 @@ const DynamicName: React.FC = () => {
           onBlur={handleBlur}
         />
       ) : (
-        <NormalText onClick={handleTextClick}>{isLoadingName ? '...' : text || '<No Name>'}</NormalText>
+        <NormalText onClick={handleTextClick}>{isLoadingName ? <LoadingComponent /> : text || '<No Name>'}</NormalText>
       )}
     </span>
   );
