@@ -8,5 +8,5 @@ export const RowDiv = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 `;

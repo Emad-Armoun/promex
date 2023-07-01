@@ -7,21 +7,21 @@
         {
           "title": "FoodPanda",
           "iconLinkType": "local",
-          "icon": "subIcon1",
+          "icon": "/icons/Foodpanda.jpeg",
           "link": "https://portal-fp-euw-stg-vt.deliveryhero.io/sg/p/ops-portal-ds-promotool#/campaigns",
           "description": "Foodpanda staging server"
         },
         {
           "title": "Talabat",
           "iconLinkType": "local",
-          "icon": "subIcon2",
+          "icon": "/icons/Talabat.png",
           "link": "https://portal-tb-euw-stg-vt.deliveryhero.io/kw/p/ops-portal-ds-promotool#/campaigns",
           "description": "Talabat staging server"
         },
         {
           "title": "Yemeksepeti",
           "iconLinkType": "local",
-          "icon": "subIcon3",
+          "icon": "/icons/Yemeksepeti.png",
           "link": "https://portal-ys-euw-stg-vt.deliveryhero.io/tr/p/ops-portal-ds-promotool?random=r4wfrvwe4jb#/campaigns",
           "description": "Yemeksepeti staging server"
         }
@@ -34,14 +34,14 @@
         {
           "title": "Foodpanda",
           "iconLinkType": "local",
-          "icon": "subIcon3",
+          "icon": "/icons/Foodpanda.jpeg",
           "link": "https://portal.foodpanda.com/bd/p/ops-portal-ds-promotool#/campaigns",
           "description": "Foodpanda production server"
         },
         {
           "title": "Talabat",
           "iconLinkType": "local",
-          "icon": "subIcon3",
+          "icon": "/icons/Talabat.png",
           "link": "https://portal.talabat.com/bh/p/ops-portal-ds-promotool#/campaigns",
           "description": "Talabat production server"
         }

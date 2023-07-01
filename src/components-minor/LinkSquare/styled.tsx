@@ -2,11 +2,10 @@ import { styled } from "@deliveryhero/armor";
 
 export const SquareDiv = styled.div`
   width: 140px;
-  height: 170px;
+  height: 160px;
   background-color: #EEE;
-  background: linear-gradient(0deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 50%, rgba(235,235,235,1) 100%);
+  background: linear-gradient(0deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 25%, rgba(235,235,235,1) 100%);
   border: none;
-  // border-radius: 10px;
 
   a {
     display: flex;
@@ -16,9 +15,8 @@ export const SquareDiv = styled.div`
     padding: 10px;
 
     img {
-      width: 90%;
-      // height: 140px;
-      max-height: 140px;
+      height: 70px;
+      margin-bottom: 10px;
     }
 
     h3 {
@@ -30,6 +28,7 @@ export const SquareDiv = styled.div`
     p {
       margin: 0;
       color: #777;
+      font-size: 12px;
     }
   }
 `;
