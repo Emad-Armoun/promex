@@ -8,7 +8,7 @@ const LinksPage: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
-    setItems(data.items);
+    setItems(data.items as Item[]);
   }, []);
 
   return (
