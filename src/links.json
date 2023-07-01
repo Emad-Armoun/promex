@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "title": "Staging Servers",
+      "icon": "icon1",
+      "subItems": [
+        {
+          "title": "FoodPanda",
+          "icon": "subIcon1",
+          "link": "https://portal-fp-euw-stg-vt.deliveryhero.io/sg/p/ops-portal-ds-promotool#/campaigns",
+          "description": "Foodpanda staging server"
+        },
+        {
+          "title": "Talabat",
+          "icon": "subIcon2",
+          "link": "https://portal-tb-euw-stg-vt.deliveryhero.io/kw/p/ops-portal-ds-promotool#/campaigns",
+          "description": "Talabat staging server"
+        },
+        {
+          "title": "Yemeksepeti",
+          "icon": "subIcon3",
+          "link": "https://portal-ys-euw-stg-vt.deliveryhero.io/tr/p/ops-portal-ds-promotool?random=r4wfrvwe4jb#/campaigns",
+          "description": "Yemeksepeti staging server"
+        }
+      ]
+    },
+    {
+      "title": "Production Servers",
+      "icon": "icon2",
+      "subItems": [
+        {
+          "title": "Foodpanda",
+          "icon": "subIcon3",
+          "link": "https://portal.foodpanda.com/bd/p/ops-portal-ds-promotool#/campaigns",
+          "description": "Foodpanda production server"
+        },
+        {
+          "title": "Talabat",
+          "icon": "subIcon3",
+          "link": "https://portal.talabat.com/bh/p/ops-portal-ds-promotool#/campaigns",
+          "description": "Talabat production server"
+        }
+      ]
+    }
+  ]
+}
