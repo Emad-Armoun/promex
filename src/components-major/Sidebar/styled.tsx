@@ -1,6 +1,6 @@
 import { styled } from "@deliveryhero/armor";
 
-export const SidebarBody = styled.div`
+export const SidebarBodyDiv = styled.div`
   width: 200px;
   background-color: #454545;
   display: flex;
@@ -8,10 +8,10 @@ export const SidebarBody = styled.div`
   align-items: center;
 `;
 
-export const IconContainer = styled.div`
+export const IconContainerDiv = styled.div`
 `;
 
-export const MenuContainer = styled.div`
+export const MenuContainerDiv = styled.div`
   margin-top: 20px;
   color: #fff;
 `;

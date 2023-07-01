@@ -14,13 +14,13 @@ export const WelcomeMessage = styled.div`
   margin-left: 10px;
 `;
 
-export const AppTitle = styled.div`
+export const AppTitleDiv = styled.div`
   color: #D82128;
   font-family: 'Jim Nightshade', cursive;
   font-size: 26px;
 `;
 
-export const DateTimeIndicator = styled.div`
+export const DateTimeIndicatorDiv = styled.div`
   font-family: 'Inria Sans', sans-serif;
   font-size: 18px;
   margin-right: 10px;
