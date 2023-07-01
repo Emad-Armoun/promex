@@ -5,8 +5,9 @@ A Chrome Extension customized for the Promotool team, developed by <b>Emad Armou
 <img alt="Emad Photo" align="right" src="https://avatars.githubusercontent.com/u/105778354?v=4" width="10%" style="border-radius: 50%;" />
 
 ## 🖥️ Features:
-- Current Date & Time
+- ✅ Current Date & Time
 - Today google sessions
+- Sentence & result management for each day
 - Todo Mng mini app
 - The Team Members
 - The Current Ninja
