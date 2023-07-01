@@ -1,5 +1,6 @@
 // import React from "react";
 import { styled } from '@deliveryhero/armor';
+import DynamicName from '../../components-minor/DynamicName';
 // import reactLogo from '../../assets/react.svg'
 
 const HeaderBody = styled.div`
@@ -32,7 +33,7 @@ const Header = () => {
   const currentDate = new Date();
   return (
     <HeaderBody>
-      <WelcomeMessage>Welcome <b>Emad</b></WelcomeMessage>
+      <WelcomeMessage>Welcome <DynamicName /></WelcomeMessage>
       <AppTitle>
         {/* <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="PromEx logo" />
