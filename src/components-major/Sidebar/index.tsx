@@ -1,22 +1,6 @@
 // import React from "react";
-import { styled } from "@deliveryhero/armor";
+import { SidebarBody, IconContainer, MenuContainer } from './styled';
 import dhLogo from '../../assets/DHIcon.svg'
-
-const SidebarBody = styled.div`
-  width: 200px;
-  background-color: #454545;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const IconContainer = styled.div`
-`;
-
-const MenuContainer = styled.div`
-  margin-top: 20px;
-  color: #fff;
-`;
 
 const Sidebar = () => {
   return (
