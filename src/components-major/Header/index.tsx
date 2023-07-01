@@ -1,6 +1,7 @@
 // import React from "react";
 import { styled } from '@deliveryhero/armor';
 import DynamicName from '../../components-minor/DynamicName';
+import LiveDateTime from '../../components-minor/DateTimeLive';
 // import reactLogo from '../../assets/react.svg'
 
 const HeaderBody = styled.div`
@@ -30,7 +31,6 @@ const DateTimeIndicator = styled.div`
 `;
 
 const Header = () => {
-  const currentDate = new Date();
   return (
     <HeaderBody>
       <WelcomeMessage>Welcome <DynamicName /></WelcomeMessage>
@@ -40,7 +40,7 @@ const Header = () => {
         </a> */}
         <span>🔥 PromEx 🔥</span>
       </AppTitle>
-      <DateTimeIndicator>{currentDate.toDateString()}</DateTimeIndicator>
+      <DateTimeIndicator><LiveDateTime /></DateTimeIndicator>
     </HeaderBody>
   )
 }
