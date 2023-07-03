@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import LoadingComponent from '../LoadingComponent';
-import { DateTimeDiv } from './styled';
+import { DateDiv, DateTimeDiv } from './styled';
 
 const LiveDateTime: React.FC = () => {
-  const [dateTime, setDateTime] = useState('');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const date = new Date();
-      const formattedDateTime = formatDate(date) + ' ' + formatTime(date);
-      setDateTime(formattedDateTime);
+      setDate(formatDate(date));
+      setTime(formatTime(date));
     }, 1000);
 
     return () => {
@@ -18,7 +19,7 @@ const LiveDateTime: React.FC = () => {
   }, []);
 
   const formatDate = (date: Date): string => {
-    const options: Intl.DateTimeFormatOptions = { weekday: 'short', day: 'numeric', month: 'short' };
+    const options: Intl.DateTimeFormatOptions = { weekday: 'short', day: 'numeric', month: 'long' };
     return date.toLocaleDateString('en-US', options);
   };
 
@@ -27,7 +28,12 @@ const LiveDateTime: React.FC = () => {
     return date.toLocaleTimeString('en-US', options);
   };
 
-  return <DateTimeDiv>{dateTime || <LoadingComponent speed={50} />}</DateTimeDiv>;
+  return <DateTimeDiv>{date ? (
+    <>
+      <DateDiv>{date}</DateDiv>
+      <div>{time}</div>
+    </>
+  ) : <LoadingComponent speed={50} />}</DateTimeDiv>;
 };
 
 export default LiveDateTime;
