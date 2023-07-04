@@ -23,7 +23,7 @@ const Sidebar: React.FC<Props> = ({ selectedMenuItem, setSelectedMenuItem }) => 
         <ul>
           {menu.menuItems.map(menuItem =>
             <li
-              style={selectedMenuItem === menuItem.key ? {backgroundColor: '#D82128'} : null}
+              style={selectedMenuItem === menuItem.key ? {backgroundColor: '#D82128'} : undefined}
               onClick={() => handleClick(menuItem.key)}
             >
               {menuItem.label}
