@@ -1,0 +1,34 @@
+{
+  "menuItems": [
+    {
+      "label": "Home",
+      "key": "home",
+      "icon": "home"
+    },
+    {
+      "label": "Links",
+      "key": "links",
+      "icon": "info"
+    },
+    {
+      "label": "Sessions",
+      "key": "sessions",
+      "icon": "group"
+    },
+    {
+      "label": "Todo List",
+      "key": "todo",
+      "icon": "info"
+    },
+    {
+      "label": "Team Info",
+      "key": "team",
+      "icon": "team"
+    },
+    {
+      "label": "Settings",
+      "key": "settings",
+      "icon": "settings"
+    }
+  ]
+}

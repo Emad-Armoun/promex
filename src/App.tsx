@@ -1,29 +1,21 @@
 // import React from 'react'
+import { useState } from 'react';
 import './App.css'
 import Header from './components-major/Header';
 import Sidebar from './components-major/Sidebar';
 import ContentRender from './components-major/ContentRender';
-import { styled } from '@deliveryhero/armor';
-
-const Container = styled.div`
-  width: 800px;
-  height: 550px;
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-`;
-const MainColumn = styled.div`
-  width: calc(100% - 200px);
-`;
+import { Container, MainColumn } from './App.styled';
+import menu from './data/menu.json'
 
 function App() {
   // const classes = useCommonClasses();
+  const [selectedMenuItem, setSelectedMenuItem] = useState(menu.menuItems[0].key);
   return (
     <Container>
-      <Sidebar />
+      <Sidebar selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
       <MainColumn>
         <Header />
-        <ContentRender />
+        <ContentRender selectedMenuItem={selectedMenuItem} />
       </MainColumn>
     </Container>
   )

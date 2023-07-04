@@ -1,8 +1,18 @@
 // import React from "react";
 import { SidebarBodyDiv, IconContainerDiv, MenuContainerDiv } from './styled';
-import dhLogo from '../../assets/DHIcon.svg'
+import dhLogo from '../../assets/DHIcon.svg';
+import menu from '../../data/menu.json';
 
-const Sidebar = () => {
+type Props = {
+  selectedMenuItem: string;
+  setSelectedMenuItem: (key: string) => void;
+}
+
+const Sidebar: React.FC<Props> = ({ selectedMenuItem, setSelectedMenuItem }) => {
+  const handleClick = (key: string) => {
+    setSelectedMenuItem(key);
+  };
+
   return (
     <SidebarBodyDiv>
       <IconContainerDiv>
@@ -10,7 +20,16 @@ const Sidebar = () => {
       </IconContainerDiv>
       
       <MenuContainerDiv>
-        <span>Menu</span>
+        <ul>
+          {menu.menuItems.map(menuItem =>
+            <li
+              style={selectedMenuItem === menuItem.key ? {backgroundColor: '#D82128'} : null}
+              onClick={() => handleClick(menuItem.key)}
+            >
+              {menuItem.label}
+            </li>
+          )}
+        </ul>
       </MenuContainerDiv>
     </SidebarBodyDiv>
   )

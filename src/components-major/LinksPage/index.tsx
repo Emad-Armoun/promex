@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { PageTitleH1, RowDiv } from "./styled";
 import { Item } from "../../types/links";
-import data from '../../links.json';
+import data from '../../data/links.json';
 import LinkSquare from "../../components-minor/LinkSquare";
 
 const LinksPage: React.FC = () => {

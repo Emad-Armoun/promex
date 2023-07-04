@@ -4,12 +4,14 @@ import { Button } from '@deliveryhero/armor';
 import { StarFilledIcon } from '@deliveryhero/armor-icons';
 import LinksPage from '../LinksPage';
 
-const ContentRender = () => {
-  const menuNumber = 1;
+type Props = {
+  selectedMenuItem: string;
+}
 
+const ContentRender: React.FC<Props> = ({ selectedMenuItem }) => {
   const renderPage = () => {
-    switch (menuNumber) {
-      case 1:
+    switch (selectedMenuItem) {
+      case 'home':
         return <LinksPage />;
       default:
         return (
