@@ -21,6 +21,16 @@
       "icon": "ChecklistOutlineIcon"
     },
     {
+      "label": "Servers",
+      "key": "servers",
+      "icon": "ModuleTreeIcon"
+    },
+    {
+      "label": "Statistics",
+      "key": "statistics",
+      "icon": "PerformanceIcon"
+    },
+    {
       "label": "Team Info",
       "key": "team",
       "icon": "IdeaStrategyIcon"
