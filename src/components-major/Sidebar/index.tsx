@@ -22,7 +22,7 @@ const Sidebar: React.FC<Props> = ({ selectedMenuItem, setSelectedMenuItem }) => 
       <MenuContainerDiv>
         <ul>
           {menu.menuItems.map((menuItem) => {
-            let ThisIcon = Icons.AddIcon;
+            let ThisIcon = Icons.LensEmptyIcon;
             if (menuItem.icon in Icons)
               ThisIcon = Icons[menuItem.icon];
             return (<li
