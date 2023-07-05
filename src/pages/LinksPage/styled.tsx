@@ -1,5 +1,9 @@
 import { styled } from "@deliveryhero/armor";
 
+export const ContainerDiv = styled.div`
+  padding: 20px;
+`;
+
 export const PageTitleH1 = styled.h1`
   margin-top: 0;
 `;
