@@ -29,6 +29,11 @@
       "label": "Settings",
       "key": "settings",
       "icon": "CogIcon"
+    },
+    {
+      "label": "About",
+      "key": "about",
+      "icon": "QuestionMarkOutlineIcon"
     }
   ]
 }
