@@ -1,7 +1,7 @@
-// import React from "react";
 import { SidebarBodyDiv, IconContainerDiv, MenuContainerDiv } from './styled';
 import dhLogo from '../../assets/DHIcon.svg';
 import menu from '../../data/menu.json';
+import * as Icons from '@deliveryhero/armor-icons';
 
 type Props = {
   selectedMenuItem: string;
@@ -21,13 +21,19 @@ const Sidebar: React.FC<Props> = ({ selectedMenuItem, setSelectedMenuItem }) => 
       
       <MenuContainerDiv>
         <ul>
-          {menu.menuItems.map(menuItem =>
-            <li
+          {menu.menuItems.map((menuItem) => {
+            let ThisIcon = Icons.AddIcon;
+            if (menuItem.icon in Icons)
+              ThisIcon = Icons[menuItem.icon];
+            return (<li
+              key={menuItem.key}
               style={selectedMenuItem === menuItem.key ? {backgroundColor: '#D82128'} : undefined}
               onClick={() => handleClick(menuItem.key)}
             >
+              <ThisIcon />
               {menuItem.label}
-            </li>
+            </li>)
+          }
           )}
         </ul>
       </MenuContainerDiv>

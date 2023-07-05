@@ -8,5 +8,5 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 export const MainColumn = styled.div`
-  width: calc(100% - 200px);
+  width: calc(100% - 170px);
 `;

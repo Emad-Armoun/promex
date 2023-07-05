@@ -3,32 +3,32 @@
     {
       "label": "Home",
       "key": "home",
-      "icon": "home"
+      "icon": "HomeIcon"
     },
     {
       "label": "Links",
       "key": "links",
-      "icon": "info"
+      "icon": "LinkIcon"
     },
     {
       "label": "Sessions",
       "key": "sessions",
-      "icon": "group"
+      "icon": "CalendarDateIcon"
     },
     {
       "label": "Todo List",
       "key": "todo",
-      "icon": "info"
+      "icon": "ChecklistOutlineIcon"
     },
     {
       "label": "Team Info",
       "key": "team",
-      "icon": "team"
+      "icon": "IdeaStrategyIcon"
     },
     {
       "label": "Settings",
       "key": "settings",
-      "icon": "settings"
+      "icon": "CogIcon"
     }
   ]
 }

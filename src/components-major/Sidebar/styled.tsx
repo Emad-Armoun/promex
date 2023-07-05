@@ -1,7 +1,7 @@
 import { styled } from "@deliveryhero/armor";
 
 export const SidebarBodyDiv = styled.div`
-  width: 200px;
+  width: 170px;
   background-color: #454545;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,6 @@ export const MenuContainerDiv = styled.div`
 
   ul {
     padding: 0;
-    text-align: center;
   }
 
   li {
@@ -27,10 +26,16 @@ export const MenuContainerDiv = styled.div`
     margin: 7px auto;
     cursor: pointer;
     list-style-type: none;
-    padding: 10px 0px;
+    padding: 10px;
 
     :hover {
       background-color: #566176;
+    }
+
+    svg {
+      color: white;
+      margin-left: 20px;
+      margin-right: 10px;
     }
   }
 `;
