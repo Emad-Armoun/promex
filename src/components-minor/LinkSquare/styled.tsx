@@ -1,8 +1,8 @@
 import { styled } from "@deliveryhero/armor";
 
 export const SquareDiv = styled.div`
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   background-color: #EEE;
   background: linear-gradient(0deg, #ccc, #fff, #fff, #eee, #fff, #eee);
   // background: linear-gradient(0deg, #ccc, #fff, #ccc, #eee, #fff, #eee);
@@ -42,6 +42,9 @@ export const SquareDiv = styled.div`
     animation: slide-up 1s ease;
   }
 
+  :hover h3 {
+    margin-top: 0 !important;
+  }
 
   @keyframes marquee {
     0%   { transform: translate(0, 0); }
@@ -61,8 +64,14 @@ export const SquareDiv = styled.div`
     align-items: center;
     padding: 10px;
 
+    h3 {
+      font-size: 14px;
+      margin-top: 10px !important;
+      transition: all 1s ease;
+    }
+
     img {
-      height: 70px;
+      height: 50px;
       margin-bottom: 10px;
       transition: all 0.5s ease-in-out;
     }
