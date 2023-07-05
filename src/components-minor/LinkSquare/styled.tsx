@@ -10,6 +10,7 @@ export const SquareDiv = styled.div`
   // background: linear-gradient(0deg, #eee, #fff, #eee, #ddd, #eee, #f5f5f5);
 	background-size: 100% 200%;
   border: none;
+  overflow: hidden;
 
   @keyframes slide-down {
     0% {
@@ -66,6 +67,7 @@ export const SquareDiv = styled.div`
 
     h3 {
       font-size: 14px;
+      text-wrap: nowrap;
       margin-top: 10px !important;
       transition: all 1s ease;
     }
