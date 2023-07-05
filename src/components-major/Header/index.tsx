@@ -1,10 +1,9 @@
-// import React from "react";
 import { HeaderBody, WelcomeMessage, AppTitleDiv, DateTimeIndicatorDiv } from './styled';
 import DynamicName from '../../components-minor/DynamicName';
 import LiveDateTime from '../../components-minor/DateTimeLive';
 // import reactLogo from '../../assets/react.svg'
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <HeaderBody>
       <WelcomeMessage>Welcome <DynamicName /></WelcomeMessage>

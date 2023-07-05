@@ -1,4 +1,3 @@
-// import React from 'react'
 import { useState } from 'react';
 import './App.css'
 import Header from './components-major/Header';
@@ -8,7 +7,6 @@ import { Container, MainColumn } from './App.styled';
 import menu from './data/menu.json'
 
 function App() {
-  // const classes = useCommonClasses();
   const [selectedMenuItem, setSelectedMenuItem] = useState(menu.menuItems[0].key);
   return (
     <Container>
