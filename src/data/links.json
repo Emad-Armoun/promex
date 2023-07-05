@@ -56,14 +56,14 @@
           "iconLinkType": "link",
           "icon": "",
           "link": "https://github.com/deliveryhero/dh-darkstores-opp-djini-ui",
-          "description": ""
+          "description": "Darkstores (Djini) frontend repository"
         },
         {
           "title": "Backend",
           "iconLinkType": "link",
           "icon": "",
           "link": "https://github.com/deliveryhero/dh-darkstores-djini",
-          "description": ""
+          "description": "Darkstores (Djini) backend repository"
         }
       ]
     },
@@ -76,14 +76,14 @@
           "iconLinkType": "link",
           "icon": "https://www.deliveryhero.com/",
           "link": "https://portal-dh-euw-stg-vt.deliveryhero.io/de/p/ops-portal-ds-promotool-deployer",
-          "description": ""
+          "description": "A Deploy tool for frontend"
         },
         {
           "title": "Drone CI",
           "iconLinkType": "link",
           "icon": "https://www.drone.io/",
           "link": "https://drone-ci.deliveryhero.net/deliveryhero/dh-darkstores-opp-djini-ui",
-          "description": ""
+          "description": "Drone tool for CI/CD"
         }
       ]
     },
@@ -96,28 +96,28 @@
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/jira",
           "link": "https://jira.deliveryhero.com/secure/RapidBoard.jspa?rapidView=5561",
-          "description": ""
+          "description": "Promotool scrum board in Jira"
         },
         {
-          "title": "Automation coverage",
+          "title": "Automation cov.",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/jira",
           "link": "https://jira.deliveryhero.com/secure/Dashboard.jspa?selectPageId=28618",
-          "description": ""
+          "description": "A dashboard to show automation coverage"
         },
         {
           "title": "Backlog",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/jira",
           "link": "https://jira.deliveryhero.com/secure/RapidBoard.jspa?rapidView=5561&view=planning.nodetail&issueLimit=100",
-          "description": ""
+          "description": "Backlog of the project"
         },
         {
           "title": "Velocity Chart",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/jira",
           "link": "https://jira.deliveryhero.com/secure/RapidBoard.jspa?rapidView=5561&view=reporting&chart=velocityChart",
-          "description": ""
+          "description": "A Jira chart to compare the velocity of the team"
         }
       ]
     },
@@ -130,28 +130,28 @@
           "iconLinkType": "link",
           "icon": "https://www.deliveryhero.com/",
           "link": "https://portal-dh-euw-stg-vt.deliveryhero.io/de/p/plugin-manager",
-          "description": ""
+          "description": "Staging server plugin manager"
         },
         {
           "title": "Confluence",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/confluence",
           "link": "https://confluence.deliveryhero.com/pages/viewpage.action?pageId=506108596",
-          "description": ""
+          "description": "Documents of the project and the team"
         },
         {
           "title": "Miro",
           "iconLinkType": "link",
           "icon": "",
           "link": "https://miro.com/app/dashboard/",
-          "description": ""
+          "description": "A whiteboard tool to draw diagrams"
         },
         {
           "title": "Scrum Poker",
           "iconLinkType": "link",
           "icon": "",
           "link": "https://www.scrumpoker-online.org/en/room/27653354/scrum-poker",
-          "description": ""
+          "description": "A voting tool to manage refinement sessions"
         },
         {
           "title": "Link2",
