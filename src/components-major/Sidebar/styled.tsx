@@ -23,10 +23,11 @@ export const MenuContainerDiv = styled.div`
   li {
     font-size: 16px;
     font-weight: bold;
-    margin: 7px auto;
+    margin: 3px auto;
     cursor: pointer;
     list-style-type: none;
     padding: 10px;
+    transition: all 0.8s ease;
 
     :hover {
       background-color: #566176;
