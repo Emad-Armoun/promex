@@ -32,7 +32,7 @@ const LinkSquare: React.FC<Props> = ({ item }) => {
     } else if (item.iconLinkType === 'link' && !item.icon) {
       setImageAddress("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=" + item.link + "&size=64");
     }
-  }, []);
+  }, [item.icon, item.iconLinkType, item.link]);
   
   return (
     <SquareDiv
