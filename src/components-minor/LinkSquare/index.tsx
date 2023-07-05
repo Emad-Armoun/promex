@@ -18,7 +18,9 @@ const LinkSquare: React.FC<Props> = ({ item }) => {
       <a href={item.link} target="_blank">
         <img src={item.icon} alt={item.title} />
         <h3>{item.title}</h3>
-        <p>{item.description}</p>
+        <div>
+          <p>{item.description}</p>
+        </div>
       </a>
     </SquareDiv>
   );

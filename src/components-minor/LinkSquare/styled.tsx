@@ -2,7 +2,7 @@ import { styled } from "@deliveryhero/armor";
 
 export const SquareDiv = styled.div`
   width: 140px;
-  height: 160px;
+  height: 140px;
   background-color: #EEE;
   background: linear-gradient(0deg, #ccc, #fff, #fff, #eee, #fff, #eee);
   // background: linear-gradient(0deg, #ccc, #fff, #ccc, #eee, #fff, #eee);
@@ -42,6 +42,18 @@ export const SquareDiv = styled.div`
     animation: slide-up 1s ease;
   }
 
+
+  @keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+
+  :hover p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 5s linear infinite;
+  }
+
   a {
     display: flex;
     flex-direction: column;
@@ -61,10 +73,17 @@ export const SquareDiv = styled.div`
       font-weight: bold;
     }
 
-    p {
-      margin: 0;
-      color: #777;
-      font-size: 12px;
+    div {
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+
+      p {
+        margin: 0;
+        color: #777;
+        font-size: 12px;
+        display: none;
+      }
     }
   }
 `;
