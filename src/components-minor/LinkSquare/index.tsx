@@ -22,9 +22,16 @@ const LinkSquare: React.FC<Props> = ({ item }) => {
   }
 
   useEffect(() => {
-    checkImage(item.icon).then((result) => {
-      if (result) setImageAddress(result as string);
-    })
+    if (item.iconLinkType === 'local' && item.icon) {
+      checkImage(item.icon).then((result) => {
+        if (result) setImageAddress(result as string);
+      });
+    }
+    else if(item.iconLinkType === 'link' && item.icon) {
+      setImageAddress("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=" + item.icon + "&size=64");
+    } else if (item.iconLinkType === 'link' && !item.icon) {
+      setImageAddress("https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=" + item.link + "&size=64");
+    }
   }, []);
   
   return (
@@ -34,6 +41,9 @@ const LinkSquare: React.FC<Props> = ({ item }) => {
       className={isHovered ? 'over' : 'out'}
     >
       <a href={item.link} target="_blank">
+        {/* <img src={imageAddress} alt={item.title} /> */}
+        {/* <img src={"https://s2.googleusercontent.com/s2/favicons?domain=" + item.link + "&size=64"} alt={item.title} /> */}
+        {/* <img src={"https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=" + item.link + "&size=64"} alt={item.title} /> */}
         <img src={imageAddress} alt={item.title} />
         <h3>{item.title}</h3>
         <div>

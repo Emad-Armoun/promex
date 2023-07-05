@@ -2,7 +2,7 @@
   "items": [
     {
       "title": "Staging Servers",
-      "icon": "icon1",
+      "icon": "",
       "subItems": [
         {
           "title": "FoodPanda",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Production Servers",
-      "icon": "icon2",
+      "icon": "",
       "subItems": [
         {
           "title": "Foodpanda",
@@ -44,6 +44,121 @@
           "icon": "/icons/Talabat.png",
           "link": "https://portal.talabat.com/bh/p/ops-portal-ds-promotool#/campaigns",
           "description": "Talabat production server"
+        }
+      ]
+    },
+    {
+      "title": "Repositories",
+      "icon": "",
+      "subItems": [
+        {
+          "title": "Frontend",
+          "iconLinkType": "link",
+          "icon": "",
+          "link": "https://github.com/deliveryhero/dh-darkstores-opp-djini-ui",
+          "description": ""
+        },
+        {
+          "title": "Backend",
+          "iconLinkType": "link",
+          "icon": "",
+          "link": "https://github.com/deliveryhero/dh-darkstores-djini",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "title": "Deployment",
+      "icon": "",
+      "subItems": [
+        {
+          "title": "FE Deployer",
+          "iconLinkType": "link",
+          "icon": "https://www.deliveryhero.com/",
+          "link": "https://portal-dh-euw-stg-vt.deliveryhero.io/de/p/ops-portal-ds-promotool-deployer",
+          "description": ""
+        },
+        {
+          "title": "Drone CI",
+          "iconLinkType": "link",
+          "icon": "https://www.drone.io/",
+          "link": "https://drone-ci.deliveryhero.net/deliveryhero/dh-darkstores-opp-djini-ui",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "title": "Boards",
+      "icon": "",
+      "subItems": [
+        {
+          "title": "Scrum Board",
+          "iconLinkType": "link",
+          "icon": "https://www.atlassian.com/software/jira",
+          "link": "https://jira.deliveryhero.com/secure/RapidBoard.jspa?rapidView=5561",
+          "description": ""
+        },
+        {
+          "title": "Automation coverage",
+          "iconLinkType": "link",
+          "icon": "https://www.atlassian.com/software/jira",
+          "link": "https://jira.deliveryhero.com/secure/Dashboard.jspa?selectPageId=28618",
+          "description": ""
+        },
+        {
+          "title": "Backlog",
+          "iconLinkType": "link",
+          "icon": "https://www.atlassian.com/software/jira",
+          "link": "https://jira.deliveryhero.com/secure/RapidBoard.jspa?rapidView=5561&view=planning.nodetail&issueLimit=100",
+          "description": ""
+        },
+        {
+          "title": "Velocity Chart",
+          "iconLinkType": "link",
+          "icon": "https://www.atlassian.com/software/jira",
+          "link": "https://jira.deliveryhero.com/secure/RapidBoard.jspa?rapidView=5561&view=reporting&chart=velocityChart",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "title": "Other Links",
+      "icon": "",
+      "subItems": [
+        {
+          "title": "Plugin Mng",
+          "iconLinkType": "link",
+          "icon": "https://www.deliveryhero.com/",
+          "link": "https://portal-dh-euw-stg-vt.deliveryhero.io/de/p/plugin-manager",
+          "description": ""
+        },
+        {
+          "title": "Confluence",
+          "iconLinkType": "link",
+          "icon": "https://www.atlassian.com/software/confluence",
+          "link": "https://confluence.deliveryhero.com/pages/viewpage.action?pageId=506108596",
+          "description": ""
+        },
+        {
+          "title": "Miro",
+          "iconLinkType": "link",
+          "icon": "",
+          "link": "https://miro.com/app/dashboard/",
+          "description": ""
+        },
+        {
+          "title": "Scrum Poker",
+          "iconLinkType": "link",
+          "icon": "",
+          "link": "https://www.scrumpoker-online.org/en/room/27653354/scrum-poker",
+          "description": ""
+        },
+        {
+          "title": "Link2",
+          "iconLinkType": "local",
+          "icon": "",
+          "link": "",
+          "description": ""
         }
       ]
     }
