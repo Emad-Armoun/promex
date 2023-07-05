@@ -1,7 +1,8 @@
 import { BodyDiv } from './styled';
 import { Button } from '@deliveryhero/armor';
 import { StarFilledIcon } from '@deliveryhero/armor-icons';
-import LinksPage from '../LinksPage';
+import LinksPage from '../../pages/LinksPage';
+import AboutPage from '../../pages/AboutPage';
 
 type Props = {
   selectedMenuItem: string;
@@ -12,6 +13,8 @@ const ContentRender: React.FC<Props> = ({ selectedMenuItem }) => {
     switch (selectedMenuItem) {
       case 'home':
         return <LinksPage />;
+      case 'about':
+        return <AboutPage />;
       default:
         return (
           <Button onClick={() => alert("you clicked!")}>
