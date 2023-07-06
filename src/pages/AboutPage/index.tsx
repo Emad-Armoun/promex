@@ -4,63 +4,52 @@ import { AboutDiv, DeveloperDiv } from "./styled";
 const AboutPage: React.FC = () => {
 
   useEffect(() => {
-    // geting canvas by Boujjou Achraf
-    const c = document.getElementById("c") as HTMLCanvasElement;
-    if (!c) return;
-    const ctx = c.getContext("2d") as CanvasRenderingContext2D;
+    const BACKGROUND_COLOR = "rgba(0, 0, 0, 0.04)";
+    const LETTERS_COLOR = "#0cff00";
+    const FONT_SIZE = 10;
 
-    //making the canvas full screen
-    c.height = window.innerHeight;
-    c.width = window.innerWidth;
+    const matrixCanvas = document.getElementById("matrixCanvas") as HTMLCanvasElement;
+    const matrixContext = matrixCanvas.getContext("2d") as CanvasRenderingContext2D;
 
-    //chinese characters - taken from the unicode charset
+    matrixCanvas.height = window.innerHeight;
+    matrixCanvas.width = window.innerWidth;
+
     const matrixLetters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
-    //converting the string into an array of single characters
     const matrix = matrixLetters.split("");
 
-    const font_size = 10;
-    const columns = c.width/font_size; //number of columns for the rain
+    const columnsCount = matrixCanvas.width/FONT_SIZE;
     //an array of drops - one per column
-    const drops: number[] = [];
-    //x below is the x coordinate
-    //1 = y co-ordinate of the drop(same for every drop initially)
-    for(let x = 0; x < columns; x++)
-        drops[x] = 1; 
+    const dropsY: number[] = [];
+    for(let x = 0; x < columnsCount; x++)
+        dropsY[x] = 1; 
 
-    //drawing the characters
-    function draw()
+    function progressRain()
     {
-        //Black BG for the canvas
-        //translucent BG to show trail
-        ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
-        ctx.fillRect(0, 0, c.width, c.height);
+        matrixContext.fillStyle = BACKGROUND_COLOR;
+        matrixContext.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
 
-        // ctx.fillStyle = "#f4427d";//green text
-        ctx.fillStyle = "#0cff00";//green text
-        ctx.font = font_size + "px arial";
-        //looping over drops
-        for(let i = 0; i < drops.length; i++)
+        matrixContext.fillStyle = LETTERS_COLOR;
+        matrixContext.font = FONT_SIZE + "px arial";
+
+        for(let i = 0; i < dropsY.length; i++)
         {
-            //a random chinese character to print
-            const text = matrix[Math.floor(Math.random()*matrix.length)];
-            //x = i*font_size, y = value of drops[i]*font_size
-            ctx.fillText(text, i*font_size, drops[i]*font_size);
+            const randomLetter = matrix[Math.floor(Math.random() * matrix.length)];
+            const x = i * FONT_SIZE;
+            const y = dropsY[i] * FONT_SIZE;
+            matrixContext.fillText(randomLetter, x, y);
 
-            //sending the drop back to the top randomly after it has crossed the screen
-            //adding a randomness to the reset to make the drops scattered on the Y axis
-            if(drops[i]*font_size > c.height && Math.random() > 0.975)
-                drops[i] = 0;
+            if(y > matrixCanvas.height && Math.random() > 0.975)
+                dropsY[i] = 0;
 
-            //incrementing Y coordinate
-            drops[i]++;
+            dropsY[i]++;
         }
     }
-    setInterval(draw, 35);
+    setInterval(progressRain, 35);
   }, []);
 
   return (
     <AboutDiv>
-      <canvas id="c"></canvas>
+      <canvas id="matrixCanvas"></canvas>
       <div>
         <h1>PromEx</h1>
         <h2>A Promotool team's chrome extension</h2>
