@@ -1,7 +1,8 @@
 section{
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 130px;
+  /* height: 70px; */
   /* background: #3586ff; */
   /* background: linear-gradient(to bottom, #fff 0%,#3586ff 60%); */
   overflow: hidden;
@@ -12,8 +13,10 @@ section .air{
   left: 0;
   width: 100%;
   height: 100px;
-  background: url(src/assets/wave-blue.png);
+  /* height: 50px; */
+  background: url(src/assets/wave-gr.png);
   background-size: 1000px 100px;
+  /* background-size: 1000px 70px; */
 }
 section .air.air1{
   animation: wave 30s linear infinite;
