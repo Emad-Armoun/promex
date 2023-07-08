@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ContainerDiv, PageTitleH1, RowDiv } from "./styled";
+import { ContainerDiv, PageTitleH1, AllLinksDiv, RowDiv } from "./styled";
 import { Item } from "../../types/links";
 import data from '../../data/links.json';
 import LinkSquare from "../../components-minor/LinkSquare";
@@ -15,7 +15,7 @@ const LinksPage: React.FC = () => {
   return (
     <ContainerDiv>
       <PageTitleH1>Important Links</PageTitleH1>
-      <div>
+      <AllLinksDiv>
         {items.map((item, index) => (
           <div key={index}>
             <h2>{item.title}</h2>
@@ -26,7 +26,7 @@ const LinksPage: React.FC = () => {
             </RowDiv>
           </div>
         ))}
-      </div>
+      </AllLinksDiv>
       <Wave />
     </ContainerDiv>
   )
