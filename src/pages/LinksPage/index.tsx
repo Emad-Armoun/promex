@@ -3,6 +3,7 @@ import { ContainerDiv, PageTitleH1, RowDiv } from "./styled";
 import { Item } from "../../types/links";
 import data from '../../data/links.json';
 import LinkSquare from "../../components-minor/LinkSquare";
+import { Wave } from "../../components-minor/Wave";
 
 const LinksPage: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]);
@@ -26,6 +27,7 @@ const LinksPage: React.FC = () => {
           </div>
         ))}
       </div>
+      <Wave />
     </ContainerDiv>
   )
 };
