@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { AboutDiv, DeveloperDiv } from "./styled";
+import myAvatar from '/src/assets/Emad.jpg';
 
 const AboutPage: React.FC = () => {
 
@@ -62,7 +63,7 @@ const AboutPage: React.FC = () => {
               emad.armoun@deliveryhero.com
             </a>
           </div>
-          <img src="/src/assets/Emad.jpg" alt="Emad Armoun" />
+          <img src={myAvatar} alt="Emad Armoun" />
         </DeveloperDiv>
       </div>
     </AboutDiv>
