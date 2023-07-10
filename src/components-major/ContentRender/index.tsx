@@ -1,6 +1,7 @@
 import { HomePage } from '../../pages/HomePage';
 import LinksPage from '../../pages/LinksPage';
 import UnderConstructionPage from '../../pages/UnderConstructionPage';
+import { SettingsPage } from '../../pages/SettingsPage';
 import AboutPage from '../../pages/AboutPage';
 import { BodyDiv } from './styled';
 
@@ -15,6 +16,8 @@ const ContentRender: React.FC<Props> = ({ selectedMenuItem }) => {
         return <HomePage />;
       case 'links':
         return <LinksPage />;
+      case 'settings':
+        return <SettingsPage />;
       case 'about':
         return <AboutPage />;
       default:
