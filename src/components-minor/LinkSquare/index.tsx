@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { SubItem } from "../../types/links";
+import { SpecialLink } from "../../types/links";
 import { SquareDiv, StarDiv } from "./styled";
 import { DEFAULT_ICON_ADDRESS } from "../../util/constants";
 import { StarOutlineIcon, StarFilledIcon } from '@deliveryhero/armor-icons';
 
 type Props = {
-  item: SubItem,
+  item: SpecialLink,
   isInFavorite: boolean,
   toggleFavorite: (itemId: number) => void,
 }

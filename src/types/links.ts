@@ -1,4 +1,4 @@
-export type SubItem = {
+export type SpecialLink = {
   id: number;
   title: string;
   iconLinkType: 'local' | 'external' | 'link';
@@ -7,8 +7,8 @@ export type SubItem = {
   description: string;
 }
 
-export type Item = {
+export type SpecialCategory = {
   title: string;
   icon: string;
-  subItems: SubItem[];
+  subItems: SpecialLink[];
 }
