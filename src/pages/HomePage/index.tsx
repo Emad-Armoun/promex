@@ -4,6 +4,7 @@ import { ContainerDiv } from "./styled"
 import { FAVORITE_ITEMS_KEY } from "../../util/constants";
 import { SpecialCategory, SpecialLink } from "../../types/links";
 import data from '../../data/links.json';
+import { Wave } from "../../components-minor/Wave";
 
 export const HomePage: React.FC = () => {
   const [favoriteItems, setFavoriteItems] = useState<SpecialCategory[]>([]);
@@ -28,8 +29,13 @@ export const HomePage: React.FC = () => {
     }
   }, []);
 
-  return <ContainerDiv>
-    <h1>Home Page</h1>
-    <Links items={favoriteItems} />
-  </ContainerDiv>
+  return (
+    <>
+      <ContainerDiv>
+        <h1>Home Page</h1>
+        <Links items={favoriteItems} />
+      </ContainerDiv>
+      <Wave />
+    </>
+  );
 };
