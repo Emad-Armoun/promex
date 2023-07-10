@@ -10,7 +10,7 @@ export const SquareDiv = styled.div`
   // background: linear-gradient(0deg, #eee, #fff, #eee, #ddd, #eee, #f5f5f5);
 	background-size: 100% 200%;
   border: none;
-  overflow: hidden;
+  position: relative;
 
   @keyframes slide-down {
     0% {
@@ -95,6 +95,46 @@ export const SquareDiv = styled.div`
         font-size: 12px;
         display: none;
       }
+    }
+  }
+`;
+
+export const StarDiv = styled.span`
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  svg {
+    color: #777;
+  }
+
+  :hover {
+    background: #a1e4a1;
+    font-size: 26px;
+    color: red;
+
+    svg {
+      color: green;
+    }
+  }
+
+  &.filled {
+    background: #a1e4a1;
+
+    svg {
+      color: green;
     }
   }
 `;

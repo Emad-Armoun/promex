@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { SubItem } from "../../types/links";
-import { SquareDiv } from "./styled";
+import { SquareDiv, StarDiv } from "./styled";
 import { DEFAULT_ICON_ADDRESS } from "../../util/constants";
+import { StarOutlineIcon, StarFilledIcon } from '@deliveryhero/armor-icons';
 
 type Props = {
   item: SubItem,
+  isInFavorite: boolean,
+  toggleFavorite: (itemId: number) => void,
 }
 
-const LinkSquare: React.FC<Props> = ({ item }) => {
+const LinkSquare: React.FC<Props> = ({ item, isInFavorite, toggleFavorite }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imageAddress, setImageAddress] = useState(DEFAULT_ICON_ADDRESS);
 
@@ -40,6 +43,13 @@ const LinkSquare: React.FC<Props> = ({ item }) => {
       onMouseOut={() => setIsHovered(false)}
       className={isHovered ? 'over' : 'out'}
     >
+      <StarDiv className={isInFavorite ? "filled" : ""} onClick={(e: MouseEvent) => {
+        e.preventDefault();
+        toggleFavorite(item.id);
+      }}>
+        {isInFavorite ? <StarFilledIcon /> : <StarOutlineIcon />}
+      </StarDiv>
+
       <a href={item.link} target="_blank">
         <img src={imageAddress} alt={item.title} />
         <h3>{item.title}</h3>
