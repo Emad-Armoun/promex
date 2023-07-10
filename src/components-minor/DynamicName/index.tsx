@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import { CustomInput, NormalText } from './styled';
 import LoadingComponent from '../LoadingComponent';
+import { USER_NAME_KEY } from '../../util/constants';
 
 const DynamicName: React.FC = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [isLoadingName, setIsLoading] = useState(true);
-  const [text, setText] = useState('');
+  const [name, setName] = useState('');
 
   useEffect(() => {
-    const savedText = localStorage.getItem('savedText');
-    if (savedText) {
-      setText(savedText);
+    const savedName = localStorage.getItem(USER_NAME_KEY);
+    if (savedName) {
+      setName(savedName);
     }
     setIsLoading(false);
   }, []);
@@ -19,15 +20,15 @@ const DynamicName: React.FC = () => {
     setIsEditing(true);
   };
 
-  const saveText = (text: string) => {
+  const saveName = (text: string) => {
     setIsEditing(false);
-    localStorage.setItem('savedText', text);
-    setText(text);
+    localStorage.setItem(USER_NAME_KEY, text);
+    setName(text);
   }
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      saveText(event.currentTarget.value);
+      saveName(event.currentTarget.value);
     }
   };
 
@@ -41,12 +42,12 @@ const DynamicName: React.FC = () => {
         <CustomInput
           type="text"
           autoFocus
-          defaultValue={text}
+          defaultValue={name}
           onKeyUp={handleKeyDown}
           onBlur={handleBlur}
         />
       ) : (
-        <NormalText onClick={handleTextClick}>{isLoadingName ? <LoadingComponent /> : text || '<No Name>'}</NormalText>
+        <NormalText onClick={handleTextClick}>{isLoadingName ? <LoadingComponent /> : name || '<No Name>'}</NormalText>
       )}
     </span>
   );
