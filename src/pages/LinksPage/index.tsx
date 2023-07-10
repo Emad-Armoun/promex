@@ -4,7 +4,7 @@ import { SpecialCategory } from "../../types/links";
 import data from '../../data/links.json';
 import { Links } from "../../components-major/Links";
 
-const LinksPage: React.FC = () => {
+export const LinksPage: React.FC = () => {
   const [items, setItems] = useState<SpecialCategory[]>([]);
 
   useEffect(() => {
@@ -18,5 +18,3 @@ const LinksPage: React.FC = () => {
     </ContainerDiv>
   )
 };
-
-export default LinksPage;

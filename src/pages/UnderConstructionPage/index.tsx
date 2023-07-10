@@ -1,7 +1,7 @@
 import './animation.css';
 import { UnderConstructionDiv, TitleDiv } from './styled';
 
-const UnderConstructionPage: React.FC = () => {
+export const UnderConstructionPage: React.FC = () => {
   return (
     <UnderConstructionDiv>
       <div className="construction"></div>
@@ -9,5 +9,3 @@ const UnderConstructionPage: React.FC = () => {
     </UnderConstructionDiv>
   );
 }
-
-export default UnderConstructionPage;

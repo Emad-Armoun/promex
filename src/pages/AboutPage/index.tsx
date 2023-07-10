@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { AboutDiv, DeveloperDiv } from "./styled";
 import myAvatar from '/src/assets/Emad.jpg';
 
-const AboutPage: React.FC = () => {
+export const AboutPage: React.FC = () => {
 
   useEffect(() => {
     const BACKGROUND_COLOR = "rgba(0, 0, 0, 0.04)";
@@ -69,5 +69,3 @@ const AboutPage: React.FC = () => {
     </AboutDiv>
   )
 }
-
-export default AboutPage;

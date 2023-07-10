@@ -1,8 +1,8 @@
 import { HomePage } from '../../pages/HomePage';
-import LinksPage from '../../pages/LinksPage';
-import UnderConstructionPage from '../../pages/UnderConstructionPage';
+import { LinksPage } from '../../pages/LinksPage';
 import { SettingsPage } from '../../pages/SettingsPage';
-import AboutPage from '../../pages/AboutPage';
+import { AboutPage } from '../../pages/AboutPage';
+import { UnderConstructionPage } from '../../pages/UnderConstructionPage';
 import { BodyDiv } from './styled';
 
 type Props = {
