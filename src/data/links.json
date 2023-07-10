@@ -5,6 +5,7 @@
       "icon": "",
       "subItems": [
         {
+          "id": 1,
           "title": "FoodPanda",
           "iconLinkType": "local",
           "icon": "/icons/Foodpanda.jpeg",
@@ -12,6 +13,7 @@
           "description": "Foodpanda staging server"
         },
         {
+          "id": 2,
           "title": "Talabat",
           "iconLinkType": "local",
           "icon": "/icons/Talabat.png",
@@ -19,6 +21,7 @@
           "description": "Talabat staging server"
         },
         {
+          "id": 3,
           "title": "Yemeksepeti",
           "iconLinkType": "local",
           "icon": "/icons/Yemeksepeti.png",
@@ -32,6 +35,7 @@
       "icon": "",
       "subItems": [
         {
+          "id": 4,
           "title": "Foodpanda",
           "iconLinkType": "local",
           "icon": "/icons/Foodpanda.jpeg",
@@ -39,6 +43,7 @@
           "description": "Foodpanda production server"
         },
         {
+          "id": 5,
           "title": "Talabat",
           "iconLinkType": "local",
           "icon": "/icons/Talabat.png",
@@ -52,6 +57,7 @@
       "icon": "",
       "subItems": [
         {
+          "id": 6,
           "title": "Frontend",
           "iconLinkType": "link",
           "icon": "",
@@ -59,6 +65,7 @@
           "description": "Darkstores (Djini) frontend repository"
         },
         {
+          "id": 7,
           "title": "Backend",
           "iconLinkType": "link",
           "icon": "",
@@ -72,6 +79,7 @@
       "icon": "",
       "subItems": [
         {
+          "id": 8,
           "title": "FE Deployer",
           "iconLinkType": "link",
           "icon": "https://www.deliveryhero.com/",
@@ -79,6 +87,7 @@
           "description": "A Deploy tool for frontend"
         },
         {
+          "id": 9,
           "title": "Drone CI",
           "iconLinkType": "link",
           "icon": "https://www.drone.io/",
@@ -92,6 +101,7 @@
       "icon": "",
       "subItems": [
         {
+          "id": 10,
           "title": "Scrum Board",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/jira",
@@ -99,6 +109,7 @@
           "description": "Promotool scrum board in Jira"
         },
         {
+          "id": 11,
           "title": "Automation cov.",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/jira",
@@ -106,6 +117,7 @@
           "description": "A dashboard to show automation coverage"
         },
         {
+          "id": 12,
           "title": "Backlog",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/jira",
@@ -113,6 +125,7 @@
           "description": "Backlog of the project"
         },
         {
+          "id": 13,
           "title": "Velocity Chart",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/jira",
@@ -126,6 +139,7 @@
       "icon": "",
       "subItems": [
         {
+          "id": 14,
           "title": "Plugin Mng",
           "iconLinkType": "link",
           "icon": "https://www.deliveryhero.com/",
@@ -133,6 +147,7 @@
           "description": "Staging server plugin manager"
         },
         {
+          "id": 15,
           "title": "Confluence",
           "iconLinkType": "link",
           "icon": "https://www.atlassian.com/software/confluence",
@@ -140,6 +155,7 @@
           "description": "Documents of the project and the team"
         },
         {
+          "id": 16,
           "title": "Miro",
           "iconLinkType": "link",
           "icon": "",
@@ -147,6 +163,7 @@
           "description": "A whiteboard tool to draw diagrams"
         },
         {
+          "id": 17,
           "title": "Scrum Poker",
           "iconLinkType": "link",
           "icon": "",
@@ -154,6 +171,7 @@
           "description": "A voting tool to manage refinement sessions"
         },
         {
+          "id": 18,
           "title": "Link2",
           "iconLinkType": "local",
           "icon": "",

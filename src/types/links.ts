@@ -1,4 +1,5 @@
 export type SubItem = {
+  id: number;
   title: string;
   iconLinkType: 'local' | 'external' | 'link';
   icon: string;
