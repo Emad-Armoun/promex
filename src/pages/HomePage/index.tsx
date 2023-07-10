@@ -16,7 +16,9 @@ export const HomePage: React.FC = () => {
 
       const filteredData: SpecialCategory[] = [];
       for (const category of data.items) {
-        const filteredCategoryItems: SpecialLink[] = category.subItems.filter(item => favoriteItemIds.includes(item.id));
+        const filteredCategoryItems: SpecialLink[] = category.subItems.filter(
+          item => favoriteItemIds.includes(item.id)
+        ) as SpecialLink[];
         if (filteredCategoryItems.length > 0) {
           filteredData.push({
             title: category.title,
