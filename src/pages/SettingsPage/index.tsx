@@ -2,13 +2,7 @@ import { Radio, RadioGroup, Switch, Typography } from '@deliveryhero/armor';
 import { ContainerDiv } from './styled';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { SETTINGS_KEY } from '../../util/constants';
-
-type SizeValues = 'small' | 'big';
-
-type Settings = {
-  dontShowCats: boolean;
-  size: SizeValues;
-}
+import { Settings, SizeValues } from '../../types/settings';
 
 export const SettingsPage: React.FC = () => {
   const [settings, setSettings] = useState<Settings>();
