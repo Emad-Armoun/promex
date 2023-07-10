@@ -1,3 +1,66 @@
+import { Radio, RadioGroup, Switch, Typography } from '@deliveryhero/armor';
+import { ContainerDiv } from './styled';
+import { ChangeEvent, useEffect, useState } from 'react';
+import { SETTINGS_KEY } from '../../util/constants';
+
+type SizeValues = 'small' | 'big';
+
+type Settings = {
+  dontShowCats: boolean;
+  size: SizeValues;
+}
+
 export const SettingsPage: React.FC = () => {
-  return <div>SettingsPage</div>;
+  const [settings, setSettings] = useState<Settings>();
+
+  useEffect(() => {
+    const storedSettingsStr = localStorage.getItem(SETTINGS_KEY);
+    if (storedSettingsStr) {
+      const storedSettingsObj = JSON.parse(storedSettingsStr);
+      setSettings(storedSettingsObj);
+    }
+  }, []);
+
+  const saveSettings = (newSettings: Settings) => {
+    localStorage.setItem(
+      SETTINGS_KEY,
+      JSON.stringify(newSettings)
+    );
+  };
+
+  const handleShowCatsChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newSettings: Settings = { ...settings, dontShowCats: event.target.checked } as Settings;
+    setSettings(newSettings);
+    saveSettings(newSettings);
+  };
+
+  const handleSizeChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const selectedValue = event.target?.value;
+
+    if (selectedValue) {
+      const newSettings: Settings = { ...settings, size: selectedValue as SizeValues } as Settings;
+      setSettings(newSettings);
+      saveSettings(newSettings);
+    }
+};
+
+  return (
+    <ContainerDiv>
+      <Switch
+        label="Don't show the categories"
+        checked={settings?.dontShowCats}
+        onChange={handleShowCatsChange}
+      />
+
+      <Typography>Size</Typography>
+        <RadioGroup
+          name="size-name"
+          selectedValue={settings?.size}
+          onChange={handleSizeChange}
+        >
+          <Radio value="small">Small</Radio>
+          <Radio value="big">Big</Radio>
+        </RadioGroup>
+    </ContainerDiv>
+  );
 };
