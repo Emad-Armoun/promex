@@ -24,7 +24,7 @@ const Sidebar: React.FC<Props> = ({ selectedMenuItem, setSelectedMenuItem }) => 
           {menu.menuItems.map((menuItem) => {
             let ThisIcon = Icons.LensEmptyIcon;
             if (menuItem.icon in Icons)
-              ThisIcon = Icons[menuItem.icon];
+              ThisIcon = Icons[menuItem.icon as never];
             return (<li
               key={menuItem.key}
               style={selectedMenuItem === menuItem.key ? {backgroundColor: '#D82128'} : undefined}
