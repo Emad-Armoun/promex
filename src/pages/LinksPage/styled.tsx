@@ -16,5 +16,5 @@ export const RowDiv = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
 `;
