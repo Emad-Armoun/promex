@@ -14,7 +14,7 @@ export const LinksPage: React.FC = () => {
   return (
     <ContainerDiv>
       <PageTitleH1>Important Links</PageTitleH1>
-      <Links items={items} />
+      <Links items={items} showFavoriteBtn={true} />
     </ContainerDiv>
   )
 };

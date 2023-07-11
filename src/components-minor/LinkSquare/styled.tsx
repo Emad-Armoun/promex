@@ -138,3 +138,41 @@ export const StarDiv = styled.span`
     }
   }
 `;
+
+export const SmallDiv = styled.div`
+  width: 120px;
+  height: 40px;
+  background-color: #EEE;
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  :hover {
+    background-color: #CCC;
+  }
+
+  a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  img {
+    height: 20px;
+    margin: 0 6px;
+  }
+
+  h3 {
+    margin: 0;
+    color: #444;
+    font-size: 14px;
+    text-wrap: nowrap;
+  }
+
+  div {
+    display: none;
+  }
+  `;
