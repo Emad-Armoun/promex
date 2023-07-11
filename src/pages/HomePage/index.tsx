@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Links } from "../../components-major/Links";
 import { Wave } from "../../components-minor/Wave";
 import { FAVORITE_ITEMS_KEY, SETTINGS_KEY } from "../../util/constants";
-import { SpecialCategory, SpecialLink } from "../../types/links";
+import { SpecialCategory } from "../../types/links";
 import { Settings } from "../../types/settings";
-import data from '../../data/links.json';
 import { ContainerDiv, TitleDiv } from "./styled"
+import { extractFavoritedLinks } from "./logic";
 
 export const HomePage: React.FC = () => {
   const [favoriteItems, setFavoriteItems] = useState<SpecialCategory[]>([]);
@@ -16,27 +16,16 @@ export const HomePage: React.FC = () => {
     if (storedSettings) {
       setSettings(JSON.parse(storedSettings));
     }
+  }, []);
 
+  useEffect(() => {
     const storedFavoriteItemIds = localStorage.getItem(FAVORITE_ITEMS_KEY);
     if (storedFavoriteItemIds) {
-      const favoriteItemIds = JSON.parse(storedFavoriteItemIds);
-
-      const filteredData: SpecialCategory[] = [];
-      for (const category of data.items) {
-        const filteredCategoryItems: SpecialLink[] = category.subItems.filter(
-          item => favoriteItemIds.includes(item.id)
-        ) as SpecialLink[];
-        if (filteredCategoryItems.length > 0) {
-          filteredData.push({
-            title: category.title,
-            icon: category.icon,
-            subItems: filteredCategoryItems
-          });
-        }
-      }
-      setFavoriteItems(filteredData);
+      const favoritedLinkIds = JSON.parse(storedFavoriteItemIds);
+      const favoritedLinkObjs = extractFavoritedLinks(favoritedLinkIds, settings);
+      setFavoriteItems(favoritedLinkObjs);
     }
-  }, []);
+  }, [settings]);
 
   return (
     <>
