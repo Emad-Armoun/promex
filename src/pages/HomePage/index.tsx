@@ -1,15 +1,22 @@
 import { useEffect, useState } from "react";
 import { Links } from "../../components-major/Links";
 import { ContainerDiv } from "./styled"
-import { FAVORITE_ITEMS_KEY } from "../../util/constants";
+import { FAVORITE_ITEMS_KEY, SETTINGS_KEY } from "../../util/constants";
 import { SpecialCategory, SpecialLink } from "../../types/links";
 import data from '../../data/links.json';
 import { Wave } from "../../components-minor/Wave";
+import { Settings } from "../../types/settings";
 
 export const HomePage: React.FC = () => {
   const [favoriteItems, setFavoriteItems] = useState<SpecialCategory[]>([]);
+  const [settings, setSettings] = useState<Settings>();
 
   useEffect(() => {
+    const storedSettings = localStorage.getItem(SETTINGS_KEY);
+    if (storedSettings) {
+      setSettings(JSON.parse(storedSettings));
+    }
+
     const storedFavoriteItemIds = localStorage.getItem(FAVORITE_ITEMS_KEY);
     if (storedFavoriteItemIds) {
       const favoriteItemIds = JSON.parse(storedFavoriteItemIds);
