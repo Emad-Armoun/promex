@@ -40,21 +40,25 @@ export const SettingsPage: React.FC = () => {
 
   return (
     <ContainerDiv>
-      <Switch
-        label="Don't show the categories"
-        checked={settings?.dontShowCats}
-        onChange={handleShowCatsChange}
-      />
+      {settings && (
+        <>
+          <Switch
+            label="Don't show the categories"
+            checked={settings?.dontShowCats}
+            onChange={handleShowCatsChange}
+          />
 
-      <Typography>Size</Typography>
-        <RadioGroup
-          name="size-name"
-          selectedValue={settings?.size}
-          onChange={handleSizeChange}
-        >
-          <Radio value="small">Small</Radio>
-          <Radio value="big">Big</Radio>
-        </RadioGroup>
-    </ContainerDiv>
+          <Typography>Size</Typography>
+          <RadioGroup
+            name="size"
+            selectedValue={settings?.size}
+            onChange={handleSizeChange}
+          >
+            <Radio value="small">Small</Radio>
+            <Radio value="big">Big</Radio>
+          </RadioGroup>
+        </>
+      )}
+      </ContainerDiv>
   );
 };
