@@ -1,11 +1,10 @@
 import React from "react";
-import { Children, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { SpecialLink } from "../../types/links";
 import { SmallDiv, SquareDiv, StarDiv } from "./styled";
 import { DEFAULT_ICON_ADDRESS } from "../../util/constants";
 import { StarOutlineIcon, StarFilledIcon } from '@deliveryhero/armor-icons';
 import { useSettings } from "../../util/useSettings";
-import { SizeValues } from "../../types/settings";
 
 type Props = {
   item: SpecialLink,
@@ -68,19 +67,6 @@ const LinkSquare: React.FC<Props> = ({ item, isInFavorite, toggleFavorite, showF
       </a>
     </DynamicWrapper>
   );
-}
-
-const DynamicDiv: React.FC<{ size: SizeValues, otherProps: unknown }> = ({ size, ...otherProps }) => {
-  switch (size) {
-    case 'small':
-      return <SquareDiv {...otherProps}>{Children}</SquareDiv>;
-    case 'big':
-      return <SquareDiv {...otherProps}>{Children}</SquareDiv>;
-    default:
-      return <SquareDiv {...otherProps}>{Children}</SquareDiv>;
-  }
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const _notReachable: never = 1;
 }
 
 export default LinkSquare;
