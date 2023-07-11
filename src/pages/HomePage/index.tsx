@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Links } from "../../components-major/Links";
-import { ContainerDiv } from "./styled"
+import { Wave } from "../../components-minor/Wave";
 import { FAVORITE_ITEMS_KEY, SETTINGS_KEY } from "../../util/constants";
 import { SpecialCategory, SpecialLink } from "../../types/links";
-import data from '../../data/links.json';
-import { Wave } from "../../components-minor/Wave";
 import { Settings } from "../../types/settings";
+import data from '../../data/links.json';
+import { ContainerDiv, TitleDiv } from "./styled"
 
 export const HomePage: React.FC = () => {
   const [favoriteItems, setFavoriteItems] = useState<SpecialCategory[]>([]);
@@ -41,7 +41,7 @@ export const HomePage: React.FC = () => {
   return (
     <>
       <ContainerDiv>
-        <h1>Home Page</h1>
+        <TitleDiv>Welcome to PromEx 😊</TitleDiv>
         <Links items={favoriteItems} />
       </ContainerDiv>
       <Wave />
