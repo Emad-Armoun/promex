@@ -7,11 +7,19 @@ import { Settings, SizeValues } from '../../types/settings';
 export const SettingsPage: React.FC = () => {
   const [settings, setSettings] = useState<Settings>();
 
+  const defaultSettings: Settings = {
+    dontShowCats: true,
+    size: 'small',
+  };
+
   useEffect(() => {
     const storedSettingsStr = localStorage.getItem(SETTINGS_KEY);
     if (storedSettingsStr) {
       const storedSettingsObj = JSON.parse(storedSettingsStr);
       setSettings(storedSettingsObj);
+    } else {
+      setSettings(defaultSettings);
+      saveSettings(defaultSettings);
     }
   }, []);
 
