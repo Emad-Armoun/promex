@@ -1,6 +1,6 @@
 import { SidebarBodyDiv, IconContainerDiv, MenuContainerDiv } from './styled';
-import dhLogo from '../../assets/DHIcon.svg';
-import menu from '../../data/menu.json';
+import dhLogo from '../../../assets/DHIcon.svg';
+import menu from '../../../data/menu.json';
 import * as Icons from '@deliveryhero/armor-icons';
 
 type Props = {

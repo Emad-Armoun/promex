@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { SpecialCategory } from "../../types/links";
-import { FAVORITE_ITEMS_KEY } from "../../util/constants";
+import { SpecialCategory } from "../../../types/links";
+import { FAVORITE_ITEMS_KEY } from "../../../util/constants";
 import { AllLinksDiv, RowDiv } from "./styled";
-import LinkSquare from "../../components-minor/LinkSquare";
-import { useSettings } from "../../util/useSettings";
+import LinkSquare from "../../minor/LinkSquare";
+import { useSettings } from "../../../util/useSettings";
 
 type Props = {
   items: SpecialCategory[];

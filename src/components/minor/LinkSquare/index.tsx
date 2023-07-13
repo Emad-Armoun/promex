@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { SpecialLink } from "../../types/links";
+import { SpecialLink } from "../../../types/links";
 import { SmallDiv, SquareDiv, StarDiv } from "./styled";
-import { DEFAULT_ICON_ADDRESS } from "../../util/constants";
+import { DEFAULT_ICON_ADDRESS } from "../../../util/constants";
 import { StarOutlineIcon, StarFilledIcon } from '@deliveryhero/armor-icons';
-import { useSettings } from "../../util/useSettings";
+import { useSettings } from "../../../util/useSettings";
 
 type Props = {
   item: SpecialLink,

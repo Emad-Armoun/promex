@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Links } from "../../components-major/Links";
-import { Wave } from "../../components-minor/Wave";
+import { Links } from "../../components/major/Links";
+import { Wave } from "../../components/minor/Wave";
 import { FAVORITE_ITEMS_KEY } from "../../util/constants";
 import { SpecialCategory } from "../../types/links";
 import { ContainerDiv, TitleDiv } from "./styled"

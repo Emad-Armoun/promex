@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ContainerDiv, PageTitleH1 } from "./styled";
 import { SpecialCategory } from "../../types/links";
 import data from '../../data/links.json';
-import { Links } from "../../components-major/Links";
+import { Links } from "../../components/major/Links";
 
 export const LinksPage: React.FC = () => {
   const [items, setItems] = useState<SpecialCategory[]>([]);

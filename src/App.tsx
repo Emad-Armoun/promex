@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './App.css'
-import Header from './components-major/Header';
-import Sidebar from './components-major/Sidebar';
-import ContentRender from './components-major/ContentRender';
+import Header from './components/major/Header';
+import Sidebar from './components/major/Sidebar';
+import ContentRender from './components/major/ContentRender';
 import { Container, MainColumn } from './App.styled';
 import menu from './data/menu.json'
 

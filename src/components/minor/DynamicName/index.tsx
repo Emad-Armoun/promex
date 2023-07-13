@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CustomInput, NormalText } from './styled';
 import LoadingComponent from '../LoadingComponent';
-import { USER_NAME_KEY } from '../../util/constants';
+import { USER_NAME_KEY } from '../../../util/constants';
 
 const DynamicName: React.FC = () => {
   const [isEditing, setIsEditing] = useState(false);

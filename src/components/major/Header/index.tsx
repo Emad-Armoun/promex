@@ -1,6 +1,6 @@
 import { HeaderBody, WelcomeMessage, AppTitleDiv, DateTimeIndicatorDiv } from './styled';
-import DynamicName from '../../components-minor/DynamicName';
-import LiveDateTime from '../../components-minor/DateTimeLive';
+import DynamicName from '../../minor/DynamicName';
+import LiveDateTime from '../../minor/DateTimeLive';
 // import reactLogo from '../../assets/react.svg'
 
 const Header: React.FC = () => {
