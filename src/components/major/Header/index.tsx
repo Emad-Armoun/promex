@@ -11,7 +11,7 @@ const Header: React.FC = () => {
         {/* <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="PromEx logo" />
         </a> */}
-        <span>🔥 PromEx 🔥</span>
+        <span>PromEx</span>
       </AppTitleDiv>
       <DateTimeIndicatorDiv><LiveDateTime /></DateTimeIndicatorDiv>
     </HeaderBody>
