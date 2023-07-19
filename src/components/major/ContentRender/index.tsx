@@ -4,6 +4,7 @@ import { SettingsPage } from '../../../pages/SettingsPage';
 import { AboutPage } from '../../../pages/AboutPage';
 import { UnderConstructionPage } from '../../../pages/UnderConstructionPage';
 import { BodyDiv } from './styled';
+import WaitingListPage from '../../../pages/WaitingListPage';
 
 type Props = {
   selectedMenuItem: string;
@@ -16,6 +17,8 @@ const ContentRender: React.FC<Props> = ({ selectedMenuItem }) => {
         return <HomePage />;
       case 'links':
         return <LinksPage />;
+      case 'waiting-list':
+        return <WaitingListPage />;
       case 'settings':
         return <SettingsPage />;
       case 'about':

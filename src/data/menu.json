@@ -11,6 +11,11 @@
       "icon": "LinkIcon"
     },
     {
+      "label": "Waiting List",
+      "key": "waiting-list",
+      "icon": "DeliveryListIcon"
+    },
+    {
       "label": "Sessions",
       "key": "sessions",
       "icon": "CalendarDateIcon"
