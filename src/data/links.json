@@ -135,6 +135,28 @@
       ]
     },
     {
+      "title": "Training Websites",
+      "icon": "",
+      "subItems": [
+        {
+          "id": 19,
+          "title": "Udemy",
+          "iconLinkType": "link",
+          "icon": "https://www.udemy.com/",
+          "link": "https://deliveryhero.udemy.com/",
+          "description": "Udemy courses"
+        },
+        {
+          "id": 20,
+          "title": "LinkedIn Learning",
+          "iconLinkType": "link",
+          "icon": "https://www.linkedin.com/learning/",
+          "link": "https://www.linkedin.com/learning/",
+          "description": "LinkedIn Learning courses"
+        }
+      ]
+    },
+    {
       "title": "Other Links",
       "icon": "",
       "subItems": [
