@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
-import { PredefinedUser as User } from '../../../types/users';
-import { ContainerDiv, ListUl } from './styled';
-
-type Props = {
-  predefinedUsers: User[];
-}
+import React, { useState } from "react";
+import { PredefinedUser as User } from "../../../types/users";
+import { ContainerDiv, ListUl } from "./styled";
+import { Props } from "./type";
 
 const AutocompleteTextInput: React.FC<Props> = ({ predefinedUsers }) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [userList, setUserList] = useState<User[]>(predefinedUsers);
   const [matchedUsers, setMatchedUsers] = useState<User[]>([]);
@@ -17,7 +14,7 @@ const AutocompleteTextInput: React.FC<Props> = ({ predefinedUsers }) => {
     setInputValue(value);
     setSelectedUser(null);
 
-    console.log('userList', userList);
+    console.log("userList", userList);
     const matched = userList.filter((user) =>
       user.name.toLowerCase().startsWith(value.toLowerCase())
     );
@@ -31,7 +28,7 @@ const AutocompleteTextInput: React.FC<Props> = ({ predefinedUsers }) => {
   };
 
   const handleAddUser = () => {
-    if (inputValue.trim() === '') return;
+    if (inputValue.trim() === "") return;
 
     const newUser: User = {
       id: Date.now(),
@@ -39,7 +36,7 @@ const AutocompleteTextInput: React.FC<Props> = ({ predefinedUsers }) => {
     };
     setUserList([...userList, newUser]);
     setSelectedUser(newUser);
-    setInputValue('');
+    setInputValue("");
     setMatchedUsers([]);
   };
 
