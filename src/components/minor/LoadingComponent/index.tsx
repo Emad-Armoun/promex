@@ -1,19 +1,18 @@
-import { useState, useEffect } from 'react';
-
-type Props = {
-  loadingText?: string,
-  speed?: number,
-}
+import { useState, useEffect } from "react";
+import { Props } from "./type";
 
 const DEFAULT_SPEED = 100;
 
-const LoadingComponent: React.FC<Props> = ({ loadingText = 'Loading...', speed = DEFAULT_SPEED}) => {
-  const [text, setText] = useState('');
+const LoadingComponent: React.FC<Props> = ({
+  loadingText = "Loading...",
+  speed = DEFAULT_SPEED,
+}) => {
+  const [text, setText] = useState("");
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setText(prevText => {
+      setText((prevText) => {
         if (prevText === loadingText) {
-          return '';
+          return "";
         }
         const nextIndex = prevText.length + 1;
         return loadingText.substring(0, nextIndex);
@@ -25,7 +24,7 @@ const LoadingComponent: React.FC<Props> = ({ loadingText = 'Loading...', speed =
     };
   }, []);
 
-  return <div>{text}</div>;
+  return <div>{text || "."}</div>;
 };
 
 export default LoadingComponent;
