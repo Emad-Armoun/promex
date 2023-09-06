@@ -3,7 +3,7 @@ import { Wave } from ".";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: "PromEx/Wave",
+  title: "Minor/Wave",
   component: Wave,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
