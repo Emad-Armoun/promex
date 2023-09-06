@@ -1,18 +1,13 @@
 import { useEffect, useState } from "react";
-import { SpecialCategory } from "../../../types/links";
 import { FAVORITE_ITEMS_KEY } from "../../../util/constants";
 import { AllLinksDiv, RowDiv } from "./styled";
 import LinkSquare from "../../minor/LinkSquare";
 import { useSettings } from "../../../util/useSettings";
-
-type Props = {
-  items: SpecialCategory[];
-  showFavoriteBtn?: boolean;
-};
+import { Props } from "./type";
 
 export const Links: React.FC<Props> = ({ items, showFavoriteBtn = false }) => {
   const [favoriteItems, setFavoriteItems] = useState<number[]>([]);
-  const settings = useSettings();  
+  const settings = useSettings();
 
   useEffect(() => {
     const storedFavoriteItems = localStorage.getItem(FAVORITE_ITEMS_KEY);
@@ -32,26 +27,28 @@ export const Links: React.FC<Props> = ({ items, showFavoriteBtn = false }) => {
     localStorage.setItem(FAVORITE_ITEMS_KEY, JSON.stringify(newFavoriteItems));
   };
 
-  const CategoryDynamicTitle = settings?.size === 'big' ? 'h2' : 'h3';
+  const CategoryDynamicTitle = settings?.size === "big" ? "h2" : "h3";
 
   return (
     <AllLinksDiv>
-      {items && items.map((item, index: number) => (
-        <div key={index}>
-          <CategoryDynamicTitle>{item.title}</CategoryDynamicTitle>
-          <RowDiv>
-            {item.subItems.map((subItem, subIndex) => (
-              <LinkSquare
-                key={subIndex}
-                item={subItem}
-                isInFavorite={favoriteItems.includes(subItem.id)}
-                toggleFavorite={toggleFavorite}
-                showFavoriteBtn={showFavoriteBtn}
-              />
-            ))}
-          </RowDiv>
-        </div>
-      ))}
+      {items &&
+        items.map((item, index: number) => (
+          <div key={index}>
+            <CategoryDynamicTitle>{item.title}</CategoryDynamicTitle>
+            <RowDiv>
+              {item.subItems.map((subItem, subIndex) => (
+                <LinkSquare
+                  key={subIndex}
+                  item={subItem}
+                  isInFavorite={favoriteItems.includes(subItem.id)}
+                  toggleFavorite={toggleFavorite}
+                  showFavoriteBtn={showFavoriteBtn}
+                  size={settings?.size || "small"}
+                />
+              ))}
+            </RowDiv>
+          </div>
+        ))}
     </AllLinksDiv>
-  )
+  );
 };
